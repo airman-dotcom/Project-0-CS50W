@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Google Search</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body>
+    <ul class="nav nav-pills nav-fill">
+
+      <li class="nav-item" onclick="changeActive(1)">
+        <a id="one" class="nav-link active" aria-current="page" >Google Search</a>
+      </li>
+
+      <li class="nav-item" onclick="changeActive(2)">
+        <a id="two" class="nav-link" >Google Image Search</a>
+      </li>
+
+      <li class="nav-item" onclick="changeActive(3)">
+        <a id="three" class="nav-link">Google Advanced Search</a>
+      </li>
+    </ul>
+    <!--From here on out it is code for searching and logo-->
+    <div id="search">
+      <!--Logo-->
+      <center>
+        <img id="logo" src="google_logo.svg">
+      </center>
+      <!--Image search-->
+      <form action="https://www.google.com/search">
+        <div id="ImageSearch">
+          <center>
+            <div id="text"> 
+              <input id="normal" auto-complete="off" type="text" name="q" id="box">
+            </div>
+          </center>
+          
+          <center>
+            <input type="hidden" name="tbm" value="isch">
+            <input type="submit" value="Image Search" >
+          </center>
+        </div>
+      </form>
+
+      <!--Google Search Normal-->
+      <form action="https://google.com/search">
+        <div id="GoogleSearch">
+          <center>
+            <div id="text">
+              <input id="normal" type="text" name="q">
+            </div>
+          </center>
+
+          <center>
+            <input id="submit" type="submit" value="Google Search">
+            <input id="lucky" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" name="btnI" type="submit" jsaction="trigger.kWlxhc" data-ved="0ahUKEwj71YLWgPDxAhXSrJ4KHUIwDqoQ19QECA4">
+          </center>
+        </div>
+      </form>
+      <!--google advanced search-->
+      <form action="https://google.com/search">
+        <div id="AdvancedSearch">
+          <div id="tophalf">
+            <div id="tophalfheaderOne">
+              <p>Find pages with...</p>
+            </div>
+            <div class="left-side">
+              <p>all these words:</p>
+              <p>this exact word or phrase:</p>
+              <p>any of these words:</p>
+              <p>none of these words:</p>
+            </div>
+            <div class="right-side">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+              <div class="info">
+                <p>Type in the important words: <span class="font">tri-colour rat terrier</span></p>
+                <p>Put exact words in quotes: </span class="font">"rat terrier"</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+  </body>
+  <script src="script.js"></script>
+</html>
